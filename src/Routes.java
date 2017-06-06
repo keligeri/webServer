@@ -6,7 +6,7 @@ import java.io.OutputStream;
 /**
  * Created by keli on 2017.06.06..
  */
-public class Redirect {
+public class Routes {
 
     @WebRoute(route = "/test")
     public void redirectToTest(HttpExchange t) throws IOException {

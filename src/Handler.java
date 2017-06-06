@@ -14,7 +14,7 @@ public class Handler {
         @Override
         public void handle(HttpExchange t) throws IOException {
 
-            Class<Redirect> obj = Redirect.class;
+            Class<Routes> obj = Routes.class;
 
             // iterate through the obj methods
             for (Method method : obj.getDeclaredMethods()) {
