@@ -3,9 +3,6 @@ import com.sun.net.httpserver.HttpExchange;
 import java.io.IOException;
 import java.io.OutputStream;
 
-/**
- * Created by keli on 2017.06.06..
- */
 public class Routes {
 
     @WebRoute(route = "/test")
@@ -38,7 +35,7 @@ public class Routes {
     @WebRoute(route = "/error")
     public void redirectToError(HttpExchange t) throws IOException {
         String response = "Wrong uri was given";
-        t.sendResponseHeaders(200, response.length());
+        t.sendResponseHeaders(404, response.length());
         OutputStream os = t.getResponseBody();
         os.write(response.getBytes());
         os.close();
